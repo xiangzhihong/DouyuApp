@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+//apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.xzh.douyuapp"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+//        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+
+    }
+
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //   提高编译速度！
+//    tasks.whenTaskAdded { task ->
+//        if (task.name.contains("lint")//如果instant run不生效，把clean这行干掉
+//                ||task.name.equals("clean")//项目中有用到aidl则不可以舍弃这个任务
+//                ||task.name.contains("Aidl")//用不到测试的时候就可以先关闭
+//                ||task.name.contains("mockableAndroidJar")
+//                ||task.name.contains("UnitTest")
+//                ||task.name.contains("AndroidTest")//用不到NDK和JNI的也关闭掉
+//                || task.name.contains("Ndk")
+//                || task.name.contains("Jni")
+//        ) {
+//            task.enabled = false
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+//    compile 'com.kaopiz:kprogresshud:1.0.1'
+//    compile 'com.github.GaoYin2016:Android-SVProgressHUD:1.0'
+    //    侧滑返回
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    //RxJava and RxAndroid
+    compile 'io.reactivex:rxjava:1.1.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    // permissions
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.0@aar'
+    //RxLifecycle 内存泄露
+    compile 'com.trello:rxlifecycle:0.6.1'
+    compile 'com.trello:rxlifecycle-components:0.6.1'
+    //    网络依赖库日志打印
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    //Retrofit2
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // log
+    compile 'com.orhanobut:logger:2.1.1'
+    //图片框架------
+    compile 'com.facebook.fresco:fresco:1.3.0'
+    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.3.0'
+    // 在 API < 14 上的机器支持 WebP 时，需要添加
+    compile 'com.facebook.fresco:animated-base-support:0.12.0'
+    // 支持 GIF 动图，需要添加
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    // 支持 WebP （静态图+动图），需要添加
+    compile 'com.facebook.fresco:animated-webp:0.12.0'
+    compile 'com.facebook.fresco:webpsupport:0.12.0'
+    // 仅支持 WebP 静态图，需要添加
+    compile 'com.facebook.fresco:webpsupport:0.12.0'
+    //TabLayout
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    // 轮播图
+    compile 'cn.bingoogolapple:bga-banner:2.1.5@aar'
+    // eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //视频播放器
+    compile project(':InitActivity')
+    //adapter
+    compile project(':BaseRecyclerviewAdapter')
+//    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.33'
+    //弹幕
+    compile 'com.github.ctiao:DanmakuFlameMaster:0.4.6'
+    //  通用PopupWindow
+    compile project(':Basepopup')
+    compile files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
+    compile 'com.google.dagger:dagger:2.12'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.12'
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Library/BaseRecyclerviewAdapter/BaseRecyclerviewAdapter.iml" filepath="$PROJECT_DIR$/Library/BaseRecyclerviewAdapter/BaseRecyclerviewAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Library/Basepopup/Basepopup.iml" filepath="$PROJECT_DIR$/Library/Basepopup/Basepopup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DouyuApp.iml" filepath="$PROJECT_DIR$/DouyuApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Library/InitActivity/InitActivity.iml" filepath="$PROJECT_DIR$/Library/InitActivity/InitActivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#85000000">
+
+    <LinearLayout
+        android:layout_width="@dimen/wh280.0dimens280.0dp"
+        android:layout_height="@dimen/wh370.0dimens370.0dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/popup_login"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/wh30.0dimens30.0dp">
+
+                <TextView
+                    android:id="@+id/tv_login_way"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/choose_login_way"
+                    android:textColor="#787878"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="@dimen/wh40.0dimens40.0dp"
+                    android:layout_height="1px"
+                    android:layout_marginRight="@dimen/wh9.0dimens9.0dp"
+                    android:layout_marginTop="@dimen/wh7.0dimens7.0dp"
+                    android:layout_toLeftOf="@id/tv_login_way"
+                    android:background="#787878" />
+
+                <View
+                    android:layout_width="@dimen/wh40.0dimens40.0dp"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/wh9.0dimens9.0dp"
+                    android:layout_marginTop="@dimen/wh7.0dimens7.0dp"
+                    android:layout_toRightOf="@id/tv_login_way"
+                    android:background="#787878" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btn_close_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/wh10.0dimens10.0dp"
+                android:layout_marginTop="@dimen/wh12.0dimens12.0dp"
+                android:clickable="true"
+                android:src="@drawable/icon_close_login" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_login_wx"
+            android:layout_width="@dimen/wh230.0dimens230.0dp"
+            android:layout_height="@dimen/wh40.0dimens40.0dp"
+            android:layout_marginLeft="@dimen/wh25.0dimens25.0dp"
+            android:layout_marginRight="@dimen/wh25.0dimens25.0dp"
+            android:layout_marginTop="@dimen/wh15.0dimens15.0dp"
+
+            android:background="@drawable/login_by_weixi_bg"
+            android:clickable="true"
+            android:drawableLeft="@drawable/login_by_weixin"
+            android:drawablePadding="-30dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/wh40.0dimens40.0dp"
+            android:text="@string/wx_login"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_login_qq"
+            android:layout_width="@dimen/wh230.0dimens230.0dp"
+            android:layout_height="@dimen/wh40.0dimens40.0dp"
+            android:layout_marginLeft="@dimen/wh25.0dimens25.0dp"
+            android:layout_marginRight="@dimen/wh25.0dimens25.0dp"
+            android:layout_marginTop="@dimen/wh13.0dimens13.0dp"
+            android:background="@drawable/login_by_qq_bg"
+            android:clickable="true"
+            android:drawableLeft="@drawable/login_by_qq"
+            android:drawablePadding="-30dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/wh40.0dimens40.0dp"
+            android:text="@string/qq_login"
+            android:textColor="@color/login_by_qq"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_login_wb"
+            android:layout_width="@dimen/wh230.0dimens230.0dp"
+            android:layout_height="@dimen/wh40.0dimens40.0dp"
+            android:layout_marginLeft="@dimen/wh25.0dimens25.0dp"
+            android:layout_marginRight="@dimen/wh25.0dimens25.0dp"
+            android:layout_marginTop="@dimen/wh13.0dimens13.0dp"
+            android:background="@drawable/login_by_weibo_bg"
+            android:clickable="true"
+            android:drawableLeft="@drawable/login_by_weibo"
+            android:drawablePadding="-30dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/wh40.0dimens40.0dp"
+            android:text="@string/wb_login"
+            android:textColor="@color/login_by_wb"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/wh12.0dimens12.0dp"
+            android:text="or"
+            android:textColor="#787878"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_login_douyu"
+            android:layout_width="@dimen/wh230.0dimens230.0dp"
+            android:layout_height="@dimen/wh40.0dimens40.0dp"
+            android:layout_marginLeft="@dimen/wh25.0dimens25.0dp"
+            android:layout_marginRight="@dimen/wh25.0dimens25.0dp"
+            android:background="@drawable/login_by_douyu"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/dy_login"
+            android:textColor="@color/background"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:padding="@dimen/wh12.0dimens12.0dp"
+            android:text="快速注册"
+            android:textColor="#ff7800"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

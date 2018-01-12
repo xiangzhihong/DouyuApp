@@ -1,0 +1,8 @@
+include ':app'
+include ':Basepopup'
+include ':InitActivity'
+include ':BaseRecyclerviewAdapter'
+
+project(':Basepopup').projectDir = new File('Library/Basepopup')
+project(':InitActivity').projectDir = new File('Library/InitActivity')
+project(':BaseRecyclerviewAdapter').projectDir = new File('Library/BaseRecyclerviewAdapter')
